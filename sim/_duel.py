@@ -17,7 +17,7 @@ def main() -> None:
     ap.add_argument("--a", default="hastinapura+anga")
     ap.add_argument("--b", default="hastinapura+gandhara")
     ap.add_argument("--games", type=int, default=100)
-    ap.add_argument("--budget", type=int, default=160)
+    ap.add_argument("--budget", type=int, default=200)
     ap.add_argument("--draw", type=int, default=2)
     ap.add_argument("--lead", default="loser", choices=("winner", "loser"))
     ap.add_argument("--mulligan", type=int, default=2)

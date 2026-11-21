@@ -30,11 +30,17 @@ python -m sim._balance               # deck strength and card costs
 Three rows, three rounds, win two. Ten cards at the start, one card per turn, pass when
 you want. Same skeleton as Gwent.
 
-Decks are built from alliances. You pick two kingdoms out of twelve, because Kurukshetra
+Decks are built from alliances. You pick two kingdoms out of thirteen, because Kurukshetra
 was two coalitions. The kingdoms are Hastinapura, Anga, Panchala, Matsya, Madra, Trigarta,
-Kamboja, Magadha, Sindhu, Gandhara, Pragjyotisha and Dvaraka. Every card costs
-"provisions" and a deck has 160 of them, so taking Bhishma means giving up three mid cards.
-Each kingdom has to supply at least 8 cards, which keeps an alliance a real blend.
+Kamboja, Magadha, Sindhu, Gandhara, Pragjyotisha, Dvaraka and Indraprastha, which is where
+the five Pandavas live. Every card costs "provisions" and a deck has 200 of them, so
+taking Bhishma means giving up two mid cards. Each kingdom has to supply at least 8 cards,
+which keeps an alliance a real blend.
+
+Most of a deck is named warriors now. Arjuna, Bhima, Yudhishthira, Abhimanyu, Ghatotkacha,
+Karna, Drona, Ashwatthama, Shalya, Jayadratha, Bhagadatta, Jarasandha and the rest, plus
+lesser names from the same lists. A few levies and guards still fill the bottom of the
+curve, because a deck needs bodies as well as heroes.
 
 The kingdoms are not equal. On their own, Magadha wins about 72% of games and Madra about
 30%. Small kingdoms need an ally, and even then they drag the alliance down. That is

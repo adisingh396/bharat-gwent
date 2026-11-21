@@ -27,12 +27,13 @@ KINGDOMS = list(FACTION_NAMES)
 
 # the six coalition decks used by the batch runner: every kingdom appears once
 PAIRS = [
-    ("hastinapura", "anga"),        # Kaurava core
+    ("hastinapura", "anga"),         # Kaurava core
     ("madra", "sindhu"),
     ("gandhara", "trigarta"),
     ("pragjyotisha", "kamboja"),
-    ("panchala", "matsya"),         # Pandava core
-    ("magadha", "dvaraka"),
+    ("panchala", "indraprastha"),    # Pandava core
+    ("matsya", "dvaraka"),
+    ("magadha", "indraprastha"),
 ]
 
 # all fifteen unordered matchups between those alliances
@@ -288,7 +289,7 @@ def main(argv=None) -> None:
     s.set_defaults(func=cmd_stats)
 
     for sp in (p, s):
-        sp.add_argument("--budget", type=int, default=160)
+        sp.add_argument("--budget", type=int, default=200)
         sp.add_argument("--draw", type=int, default=0,
                         help="cards drawn between rounds (0 = classic Gwent)")
         sp.add_argument("--lead", choices=("winner", "loser"), default="winner",

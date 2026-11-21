@@ -517,7 +517,7 @@ class Game:
         return copy.deepcopy(self)
 
 
-def new_game(faction_a, faction_b, seed: int = 0, budget: int = 160,
+def new_game(faction_a, faction_b, seed: int = 0, budget: int = 200,
              draw_between: int = 0, lead_loser: bool = False,
              mulligan_count: int = 2) -> Game:
     rng = random.Random(seed)

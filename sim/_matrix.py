@@ -26,7 +26,7 @@ def main() -> None:
     import argparse
     ap = argparse.ArgumentParser()
     ap.add_argument("--games", type=int, default=100)
-    ap.add_argument("--budget", type=int, default=160)
+    ap.add_argument("--budget", type=int, default=200)
     ap.add_argument("--draw", type=int, default=2)
     ap.add_argument("--lead", default="loser", choices=("winner", "loser"))
     args = ap.parse_args()
