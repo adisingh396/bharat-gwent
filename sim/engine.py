@@ -89,6 +89,7 @@ class Game:
     rng: random.Random = field(default_factory=random.Random)
     blocked: dict = field(default_factory=dict)   # (side, row) -> True this round
     locked: dict = field(default_factory=dict)    # (side, row) -> True this round
+    vyuha: dict = field(default_factory=dict)     # (side, row) -> bonus per unit
 
     # ---------- scoring ----------
 
@@ -124,7 +125,7 @@ class Game:
                 if horn:
                     s *= 2
             total += s
-        return total
+        return total + self.vyuha.get((p, row), 0) * len(cards)
 
     def total(self, p: int) -> int:
         return sum(self.row_total(p, r) for r in ROWS)
@@ -179,6 +180,8 @@ class Game:
             return any(c.poisoned for r in ROWS for c in self.sides[p].rows[r])
         if kind == "enemy_horn":
             return any(self.sides[opp].horns.values())
+        if kind == "own_row_units":
+            return row is not None and len(self.sides[p].rows[row]) >= n
         return True
 
     def legal_actions(self, p: int) -> list[tuple]:
@@ -278,6 +281,11 @@ class Game:
                 self.locked[(1 - p, row)] = True
             elif ab.startswith("kill_low:") and row:
                 self._kill_low(1 - p, row, int(ab.split(":")[1]))
+            elif ab.startswith("vyuha:") and row:
+                parts = ab.split(":")
+                self.vyuha[(p, row)] = int(parts[1])
+                if len(parts) > 2 and parts[2] == "lock":
+                    self.blocked[(1 - p, row)] = True
             elif ab == "dispel":
                 self.weather = {r: False for r in ROWS}
                 for r in ROWS:
@@ -485,6 +493,7 @@ class Game:
         self.weather = {r: False for r in ROWS}
         self.blocked = {}
         self.locked = {}
+        self.vyuha = {}
         self.log.append((self.round, self._turn_no(), -1, None, "round-end", s))
 
         if self.wins[0] == 2 or self.wins[1] == 2 or self.round == 3:

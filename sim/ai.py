@@ -71,6 +71,8 @@ class HeuristicAI:
                     return 4.5 + bonus * 0.4 + (1.0 if "immune" in parts else 0.0)
                 if c.ability.startswith("divine:"):
                     return 6.5 + (1.0 if c.d.requires else 0.0)
+                if c.ability.startswith("vyuha:"):
+                    return 5.5
                 if c.d.requires:
                     return 3.0   # situational: may be dead in this matchup
                 return {

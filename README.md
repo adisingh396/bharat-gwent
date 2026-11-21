@@ -46,9 +46,12 @@ The kingdoms are not equal. On their own, Magadha wins about 72% of games and Ma
 30%. Small kingdoms need an ally, and even then they drag the alliance down. That is
 deliberate.
 
-Special cards come in three ranks. A shaastra is a physical weapon and attaches to one of
+Special cards come in four kinds. A shaastra is a physical weapon and attaches to one of
 your warriors. An astra is an invoked weapon that hits the board. A divine weapon is one
-per deck and costs you a warrior when you use it.
+per deck and costs you a warrior when you use it. A vyuha is a battle formation: you play
+it on your own row once at least three units stand there, and it pays a bonus for every
+unit in that row. Two of them, Chakravyuha and Sarvatobhadra, also close the row to the
+enemy for the round.
 
 Astras only work when the board suits them. Varunastra needs weather up, Vasavi Shakti
 needs an enemy hero, Brahmashirsha needs an enemy row worth 15 points. A hand can be full

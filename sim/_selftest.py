@@ -305,6 +305,32 @@ def main() -> None:
     play(g, "padati")
     check("Raudrastra kills the small ones", g.row_total(1, "padati") == 9)
 
+    # vyuhas: a formation needs three units and rewards the whole row
+    g = fresh()
+    put(g, 0, "padati", 4)
+    put(g, 0, "padati", 4)
+    give(g, "chakra")           # requires own_row_units:3
+    acts = [a for a in g.legal_actions(0) if a[0] == "play"]
+    check("a vyuha needs three units to be legal",
+          all(a[1] != 0 for a in acts))
+    put(g, 0, "padati", 4)
+    acts = [a for a in g.legal_actions(0) if a[0] == "play"]
+    check("the vyuha becomes legal at three units",
+          any(a[1] == 0 for a in acts))
+    play(g, "padati")
+    check("Chakravyuha adds one per unit", g.row_total(0, "padati") == 15,
+          f"padati={g.row_total(0, 'padati')} (12 + 3)")
+    check("Chakravyuha closes the row to the enemy",
+          g.blocked.get((1, "padati")) is True)
+
+    g = fresh()
+    for _ in range(3):
+        put(g, 0, "ashva", 5)
+    give(g, "ardhachandra")     # vyuha:2
+    play(g, "ashva")
+    check("Ardhachandra adds two per unit", g.row_total(0, "ashva") == 21,
+          f"ashva={g.row_total(0, 'ashva')} (15 + 6)")
+
     print("\n  all special effects behave.")
 
 

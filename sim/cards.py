@@ -1,7 +1,9 @@
 """Card data for the Akshauhini simulator.
 
 Thirteen kingdoms, 33 cards each (counting duplicates), plus the three ranks of
-celestial hardware. Ability strings mirror classic Gwent:
+celestial hardware and the vyuhas.
+
+Ability strings mirror classic Gwent:
 
   ""            vanilla
   hero          immune to weather and scorch
@@ -45,16 +47,20 @@ _POOLS = {
         ("Vikarna", "padati", 9, "morale", 1),
         ("Bhurishravas", "gaja", 11, "bond", 2),
         ("Somadatta", "gaja", 7, "bond", 2),
-        ("Bahlika", "gaja", 8, "bond", 2),
-        ("Dushasana", "padati", 7, "", 2),
-        ("Vivimsati", "padati", 6, "", 2),
-        ("Durmukha", "padati", 5, "", 2),
+        ("Bahlika", "gaja", 8, "", 1),
+        ("Dushasana", "padati", 7, "", 1),
+        ("Vivimsati", "padati", 6, "", 1),
+        ("Durmukha", "padati", 5, "", 1),
+        ("Durmarshana", "padati", 6, "", 1),
+        ("Dussaha", "padati", 5, "", 1),
+        ("Subahu", "padati", 5, "", 1),
+        ("Chitrasena", "padati", 6, "", 1),
         ("Sanjaya", "padati", 4, "spy", 1),
-        ("Kuru Levy", "padati", 2, "bond", 4),
-        ("Kuru Archer", "ashva", 3, "", 3),
-        ("Kuru Elephant", "gaja", 4, "", 3),
         ("Kuru Chariot", "gaja", 6, "", 2),
+        ("Kuru Elephant", "gaja", 4, "", 2),
+        ("Kuru Archer", "ashva", 3, "", 2),
         ("Kuru Medic", "ashva", 5, "medic", 2),
+        ("Kuru Levy", "padati", 2, "bond", 4),
     ],
     "anga": [
         ("Karna", "ashva", 16, "hero", 1),
@@ -63,15 +69,17 @@ _POOLS = {
         ("Chitrasena", "padati", 10, "morale", 1),
         ("Sushena", "ashva", 7, "bond", 2),
         ("Satyasena", "ashva", 6, "bond", 2),
-        ("Anga Bowline", "ashva", 3, "bond", 4),
-        ("Anga Spearman", "padati", 3, "", 3),
-        ("Anga Guard", "padati", 4, "", 3),
-        ("Anga Rider", "ashva", 5, "agile", 3),
+        ("Anga Champion", "padati", 6, "", 1),
+        ("Anga Vanguard", "padati", 4, "", 2),
+        ("Anga Guard", "padati", 4, "", 2),
+        ("Anga Spearman", "padati", 3, "", 2),
+        ("Anga Rider", "ashva", 5, "agile", 2),
+        ("Anga Bowline", "ashva", 3, "bond", 3),
+        ("Anga Scout", "ashva", 4, "", 2),
+        ("Anga Chariot", "gaja", 6, "", 2),
         ("Anga Medic", "padati", 5, "medic", 2),
         ("Anga Informant", "ashva", 0, "spy", 1),
         ("Sun Herald", "ashva", 2, "morale", 2),
-        ("Anga Chariot", "gaja", 6, "", 3),
-        ("Anga Vanguard", "padati", 4, "", 4),
     ],
     "panchala": [
         ("Dhrishtadyumna", "gaja", 14, "hero", 1),
@@ -80,15 +88,17 @@ _POOLS = {
         ("Satyajit", "gaja", 8, "bond", 2),
         ("Uttamaujas", "ashva", 10, "morale", 1),
         ("Yudhamanyu", "ashva", 10, "morale", 1),
-        ("Dhrishtaketu", "gaja", 9, "", 2),
-        ("Chekitana", "ashva", 8, "agile", 2),
-        ("Panchala Longbow", "ashva", 3, "bond", 4),
-        ("Panchala Levy", "padati", 2, "bond", 5),
-        ("Panchala Chariot", "gaja", 5, "", 3),
-        ("Panchala Guard", "padati", 4, "", 3),
-        ("Panchala Rider", "ashva", 4, "agile", 3),
+        ("Dhrishtaketu", "gaja", 9, "", 1),
+        ("Chekitana", "ashva", 8, "agile", 1),
+        ("Panchala Champion", "padati", 6, "", 1),
+        ("Panchala Longbow", "ashva", 3, "bond", 3),
+        ("Panchala Chariot", "gaja", 5, "", 2),
+        ("Panchala Guard", "padati", 4, "", 2),
+        ("Panchala Rider", "ashva", 4, "agile", 2),
         ("Panchala Medic", "padati", 5, "medic", 2),
         ("Panchala Scout", "padati", 1, "spy", 1),
+        ("Panchala Spear", "padati", 3, "", 2),
+        ("Panchala Levy", "padati", 2, "bond", 4),
     ],
     "matsya": [
         ("Virata", "gaja", 13, "hero", 1),
@@ -96,112 +106,129 @@ _POOLS = {
         ("Shveta", "gaja", 10, "hero", 1),
         ("Shankha", "padati", 7, "morale", 1),
         ("Uttara", "ashva", 6, "medic", 1),
-        ("Sudhanva", "ashva", 7, "", 2),
-        ("Matsya Wall", "padati", 2, "bond", 5),
-        ("Matsya Elephant", "gaja", 5, "bond", 3),
-        ("Matsya Archer", "ashva", 3, "", 4),
-        ("Matsya Spear", "padati", 4, "", 3),
-        ("Matsya Rider", "ashva", 4, "agile", 3),
+        ("Sudhanva", "ashva", 7, "", 1),
+        ("Matsya Champion", "padati", 6, "", 1),
+        ("Matsya Wall", "padati", 2, "bond", 4),
+        ("Matsya Elephant", "gaja", 5, "bond", 2),
+        ("Matsya Archer", "ashva", 3, "", 2),
+        ("Matsya Spear", "padati", 4, "", 2),
+        ("Matsya Rider", "ashva", 4, "agile", 2),
         ("Matsya Medic", "padati", 5, "medic", 2),
         ("Matsya Informant", "ashva", 0, "spy", 1),
         ("Virata Guard", "gaja", 6, "", 2),
+        ("Matsya Levy", "padati", 2, "bond", 4),
     ],
     "madra": [
         ("Shalya", "gaja", 15, "hero", 1),
         ("Rukmaratha", "gaja", 10, "morale", 1),
-        ("Madra Noble", "padati", 6, "", 2),
-        ("Madra Lancers", "padati", 4, "bond", 4),
-        ("Madra Chariot", "gaja", 6, "", 3),
-        ("Madra Spear", "padati", 3, "", 3),
-        ("Madra Rider", "ashva", 4, "agile", 3),
+        ("Madra Noble", "padati", 6, "", 1),
+        ("Madra Champion", "gaja", 7, "", 1),
+        ("Madra Veteran", "padati", 5, "", 2),
+        ("Madra Lancers", "padati", 4, "bond", 3),
+        ("Madra Chariot", "gaja", 6, "", 2),
+        ("Madra Spear", "padati", 3, "", 2),
+        ("Madra Rider", "ashva", 4, "agile", 2),
         ("Madra Medic", "padati", 5, "medic", 2),
         ("Madra Scout", "padati", 1, "spy", 1),
-        ("Madra Guard", "padati", 4, "", 4),
-        ("Madra Archer", "ashva", 3, "bond", 4),
+        ("Madra Guard", "padati", 4, "", 2),
+        ("Madra Archer", "ashva", 3, "bond", 3),
         ("Shalya's Driver", "gaja", 5, "morale", 2),
+        ("Madra Levy", "padati", 2, "bond", 4),
     ],
     "trigarta": [
         ("Susharma", "gaja", 12, "hero", 1),
         ("Satyaratha", "ashva", 7, "bond", 2),
         ("Satyavarma", "ashva", 7, "bond", 2),
-        ("Trigarta Champion", "padati", 6, "", 2),
-        ("Samsaptaka", "padati", 3, "bond", 5),
-        ("Trigarta Chariot", "gaja", 5, "", 3),
-        ("Trigarta Rider", "ashva", 4, "agile", 3),
-        ("Trigarta Spear", "padati", 3, "", 4),
+        ("Trigarta Champion", "padati", 6, "", 1),
+        ("Trigarta Veteran", "padati", 5, "", 2),
+        ("Samsaptaka", "padati", 3, "bond", 4),
+        ("Trigarta Chariot", "gaja", 5, "", 2),
+        ("Trigarta Rider", "ashva", 4, "agile", 2),
+        ("Trigarta Spear", "padati", 3, "", 2),
         ("Trigarta Medic", "padati", 5, "medic", 2),
         ("Trigarta Informant", "ashva", 0, "spy", 1),
-        ("Mountain Archer", "ashva", 4, "morale", 3),
+        ("Mountain Archer", "ashva", 4, "morale", 2),
         ("Trigarta Guard", "padati", 4, "", 2),
+        ("Trigarta Levy", "padati", 2, "bond", 4),
     ],
     "kamboja": [
         ("Sudakshina", "ashva", 12, "hero", 1),
-        ("Kamboja Lancer", "ashva", 6, "", 2),
-        ("Kamboja Horse Archer", "ashva", 4, "bond", 4),
-        ("Kamboja Skirmisher", "padati", 3, "agile", 3),
-        ("Kamboja Outrider", "ashva", 5, "agile", 3),
-        ("Kamboja Chariot", "gaja", 5, "", 3),
-        ("Kamboja Guard", "padati", 4, "", 3),
+        ("Kamboja Lancer", "ashva", 6, "", 1),
+        ("Kamboja Champion", "ashva", 7, "", 2),
+        ("Kamboja Horse Archer", "ashva", 4, "bond", 3),
+        ("Kamboja Skirmisher", "padati", 3, "agile", 2),
+        ("Kamboja Outrider", "ashva", 5, "agile", 2),
+        ("Kamboja Chariot", "gaja", 5, "", 2),
+        ("Kamboja Guard", "padati", 4, "", 2),
         ("Kamboja Medic", "padati", 5, "medic", 2),
         ("Kamboja Scout", "padati", 1, "spy", 1),
         ("Kamboja Standard", "ashva", 2, "morale", 2),
-        ("Kamboja Spear", "padati", 3, "", 3),
-        ("Kamboja Rider", "ashva", 4, "agile", 3),
+        ("Kamboja Spear", "padati", 3, "", 2),
+        ("Kamboja Rider", "ashva", 4, "agile", 2),
+        ("Kamboja Levy", "padati", 2, "bond", 4),
     ],
     "magadha": [
         ("Jarasandha", "padati", 15, "hero", 1),
         ("Sahadeva of Magadha", "gaja", 11, "morale", 1),
         ("Jayatsena", "padati", 10, "morale", 1),
-        ("Magadha Bruiser", "padati", 6, "", 3),
-        ("Magadha Maceman", "padati", 4, "bond", 5),
-        ("Magadha Elephant", "gaja", 5, "bond", 3),
-        ("Magadha Guard", "padati", 4, "", 3),
-        ("Magadha Archer", "ashva", 3, "bond", 4),
+        ("Magadha Bruiser", "padati", 6, "", 1),
+        ("Magadha Veteran", "padati", 5, "", 2),
+        ("Magadha Maceman", "padati", 4, "bond", 4),
+        ("Magadha Elephant", "gaja", 5, "bond", 2),
+        ("Magadha Guard", "padati", 4, "", 2),
+        ("Magadha Archer", "ashva", 3, "bond", 3),
         ("Magadha Medic", "padati", 5, "medic", 2),
         ("Magadha Informant", "padati", 1, "spy", 1),
-        ("Magadha Chariot", "gaja", 6, "", 3),
+        ("Magadha Chariot", "gaja", 6, "", 2),
+        ("Magadha Levy", "padati", 2, "bond", 4),
     ],
     "sindhu": [
         ("Jayadratha", "gaja", 12, "hero", 1),
         ("Kotikashya", "gaja", 8, "bond", 2),
-        ("Kotika", "padati", 6, "", 2),
-        ("Sindhu Veteran", "padati", 7, "", 2),
+        ("Kotika", "padati", 6, "", 1),
+        ("Sindhu Veteran", "padati", 7, "", 1),
+        ("Sindhu Champion", "gaja", 7, "", 2),
         ("Sindhu Blockade", "padati", 3, "bond", 2),
-        ("Sindhu Horseman", "ashva", 3, "agile", 3),
-        ("Sindhu Guard", "padati", 4, "", 4),
-        ("Sindhu Archer", "ashva", 3, "bond", 4),
+        ("Sindhu Horseman", "ashva", 3, "agile", 2),
+        ("Sindhu Guard", "padati", 4, "", 2),
+        ("Sindhu Archer", "ashva", 3, "bond", 3),
         ("Sindhu Medic", "padati", 5, "medic", 2),
         ("Sindhu Informant", "ashva", 0, "spy", 1),
-        ("Sindhu Chariot", "gaja", 6, "", 3),
+        ("Sindhu Chariot", "gaja", 6, "", 2),
         ("Sindhu Standard", "padati", 2, "morale", 2),
+        ("Sindhu Levy", "padati", 2, "bond", 4),
     ],
     "gandhara": [
         ("Shakuni", "padati", 9, "hero", 1),
         ("Uluka", "ashva", 7, "spy", 1),
         ("Vrishaka", "ashva", 6, "bond", 2),
         ("Achala", "padati", 6, "bond", 2),
-        ("Gandhara Sellsword", "padati", 5, "", 2),
-        ("Gandhara Rider", "ashva", 3, "agile", 4),
-        ("Gandhara Skirmisher", "padati", 3, "", 4),
+        ("Gandhara Sellsword", "padati", 5, "", 1),
+        ("Gandhara Cutthroat", "padati", 4, "", 2),
+        ("Gandhara Rider", "ashva", 3, "agile", 3),
+        ("Gandhara Skirmisher", "padati", 3, "", 3),
         ("Gandhara Medic", "padati", 5, "medic", 2),
         ("Gandhara Informant", "ashva", 0, "spy", 1),
         ("Gandhara Archer", "ashva", 2, "bond", 3),
-        ("Gandhara Guard", "padati", 4, "", 3),
+        ("Gandhara Guard", "padati", 4, "", 2),
         ("Gandhara Standard", "padati", 2, "morale", 2),
+        ("Gandhara Levy", "padati", 2, "bond", 4),
     ],
     "pragjyotisha": [
         ("Bhagadatta", "gaja", 15, "hero", 1),
         ("Supratika", "gaja", 14, "hero", 1),
         ("Vajradatta", "gaja", 11, "bond", 2),
-        ("Kirata Chieftain", "padati", 6, "", 2),
-        ("Mleccha Elephant", "gaja", 6, "bond", 3),
-        ("Kirata Hunter", "ashva", 3, "agile", 3),
-        ("Pragjyotisha Guard", "padati", 4, "", 3),
-        ("Pragjyotisha Archer", "ashva", 3, "bond", 4),
+        ("Pragjyotisha Champion", "gaja", 7, "", 2),
+        ("Kirata Chieftain", "padati", 6, "", 1),
+        ("Mleccha Elephant", "gaja", 6, "bond", 2),
+        ("Kirata Hunter", "ashva", 3, "agile", 2),
+        ("Pragjyotisha Guard", "padati", 4, "", 2),
+        ("Pragjyotisha Archer", "ashva", 3, "bond", 3),
         ("Pragjyotisha Medic", "padati", 5, "medic", 2),
         ("Pragjyotisha Scout", "padati", 1, "spy", 1),
-        ("War Elephant Calf", "gaja", 4, "", 3),
+        ("War Elephant Calf", "gaja", 4, "", 2),
         ("Ankusha Bearer", "padati", 2, "morale", 2),
+        ("Pragjyotisha Levy", "padati", 2, "bond", 4),
     ],
     "dvaraka": [
         ("Krishna", "ashva", 18, "hero", 1),
@@ -209,13 +236,15 @@ _POOLS = {
         ("Satyaki", "gaja", 14, "hero", 1),
         ("Pradyumna", "ashva", 11, "morale", 1),
         ("Kritavarma", "padati", 10, "morale", 1),
-        ("Samba", "ashva", 8, "", 2),
-        ("Narayani Sena", "padati", 4, "bond", 4),
-        ("Yadava Chariot", "gaja", 6, "", 3),
-        ("Yadava Guard", "padati", 5, "", 3),
+        ("Samba", "ashva", 8, "", 1),
+        ("Yadava Champion", "padati", 7, "", 2),
+        ("Narayani Sena", "padati", 4, "bond", 3),
+        ("Yadava Chariot", "gaja", 6, "", 2),
+        ("Yadava Guard", "padati", 5, "", 2),
         ("Yadava Medic", "padati", 5, "medic", 2),
         ("Yadava Informant", "ashva", 0, "spy", 1),
         ("Yadava Archer", "ashva", 3, "bond", 3),
+        ("Yadava Levy", "padati", 2, "bond", 4),
     ],
     "indraprastha": [
         ("Arjuna", "ashva", 16, "hero", 1),
@@ -228,12 +257,16 @@ _POOLS = {
         ("Draupadi", "padati", 8, "morale", 1),
         ("Iravan", "ashva", 8, "agile", 1),
         ("Prativindhya", "padati", 7, "bond", 2),
+        ("Sutasoma", "padati", 6, "", 1),
+        ("Shrutakarma", "padati", 6, "", 1),
+        ("Satanika", "padati", 6, "", 1),
+        ("Shrutasena", "padati", 6, "", 1),
         ("Mayasura", "padati", 3, "spy", 1),
-        ("Indraprastha Guard", "padati", 4, "", 3),
-        ("Indraprastha Archer", "ashva", 3, "bond", 4),
-        ("Palace Elephant", "gaja", 5, "", 3),
+        ("Indraprastha Guard", "padati", 4, "", 2),
+        ("Indraprastha Archer", "ashva", 3, "bond", 3),
+        ("Palace Elephant", "gaja", 5, "", 2),
         ("Indraprastha Chariot", "gaja", 6, "", 2),
-        ("Indraprastha Levy", "padati", 2, "bond", 5),
+        ("Indraprastha Levy", "padati", 2, "bond", 4),
     ],
 }
 
@@ -286,19 +319,16 @@ KINGDOM_TIER = {
     "gandhara": "weak",
 }
 
-# Equal contribution keeps alliances honest: an ally's cards are in your deck,
-# weak or not. The tier table is a deck-legality statement instead: a minor or
-# weak kingdom cannot field an army alone, it needs an ally.
 MIN_CONTRIB = {"major": 8, "minor": 8, "weak": 8}
 MIN_KINGDOMS = {"major": 1, "minor": 2, "weak": 2}
 
 KINGDOM_ORDER = {name: i for i, name in enumerate(FACTION_NAMES)}
 
-# ---------- three ranks of celestial hardware ----------
+# ---------- celestial hardware ----------
 # Shaastra: a physical weapon. Attaches to one of your warriors and stays there.
-# Astra:    a mantra-weapon. Hits the battlefield, never attaches, and needs
-#           the board to suit it.
+# Astra:    a mantra-weapon. Hits the battlefield and needs the board to suit it.
 # Divine:   the Brahma-class tier. One per deck, and it takes a sacrifice.
+# Vyuha:    a battle formation. Played on your own row, and it rewards mass.
 
 SPECIALS = {
     "frost": CardDef("Biting Frost", "neutral", "special", 0, "weather:padati"),
@@ -365,6 +395,52 @@ DIVINE = {
                       "divine:kill_row_low:5", requires="row_units:3"),
 }
 
+# vyuhas: played on your own row, needs three units there. Rewards a committed row.
+VYUHAS = {
+    "sarvatobhadra": CardDef("Sarvatobhadra Vyuha", "neutral", "special", 0,
+                             "vyuha:1:lock", requires="own_row_units:3"),
+    "ardhachandra": CardDef("Ardhachandra Vyuha", "neutral", "special", 0,
+                            "vyuha:2", requires="own_row_units:3"),
+    "chakra": CardDef("Chakravyuha", "neutral", "special", 0,
+                      "vyuha:1:lock", requires="own_row_units:3"),
+    "kurma": CardDef("Kurma Vyuha", "neutral", "special", 0,
+                     "vyuha:1", requires="own_row_units:3"),
+    "vajra_vyuha": CardDef("Vajra Vyuha", "neutral", "special", 0,
+                     "vyuha:2", requires="own_row_units:3"),
+    "shyena": CardDef("Shyena Vyuha", "neutral", "special", 0,
+                      "vyuha:2", requires="own_row_units:3"),
+    "garuda_vyuha": CardDef("Garuda Vyuha", "neutral", "special", 0,
+                            "vyuha:1", requires="own_row_units:3"),
+    "makara": CardDef("Makara Vyuha", "neutral", "special", 0,
+                      "vyuha:2", requires="own_row_units:3"),
+    "shakata": CardDef("Shakata Vyuha", "neutral", "special", 0,
+                       "vyuha:1:lock", requires="own_row_units:3"),
+    "vyala": CardDef("Vyala Vyuha", "neutral", "special", 0,
+                     "vyuha:1", requires="own_row_units:3"),
+    "krauncha": CardDef("Krauncha Vyuha", "neutral", "special", 0,
+                        "vyuha:1", requires="own_row_units:3"),
+    "mandala": CardDef("Mandala Vyuha", "neutral", "special", 0,
+                       "vyuha:1", requires="own_row_units:3"),
+    "deva": CardDef("Deva Vyuha", "neutral", "special", 0,
+                    "vyuha:2", requires="own_row_units:3"),
+}
+
+KINGDOM_VYUHA = {
+    "hastinapura": "sarvatobhadra",
+    "anga": "ardhachandra",
+    "panchala": "chakra",
+    "matsya": "kurma",
+    "madra": "vajra_vyuha",
+    "trigarta": "shyena",
+    "kamboja": "garuda_vyuha",
+    "magadha": "makara",
+    "sindhu": "shakata",
+    "gandhara": "vyala",
+    "pragjyotisha": "krauncha",
+    "dvaraka": "mandala",
+    "indraprastha": "deva",
+}
+
 PROVISIONS = {
     "frost": 5, "fog": 5, "rain": 5, "clear": 4, "horn": 5, "scorch": 5,
     "agni": 8, "varuna": 6, "vayu": 7, "parvata": 6, "naga": 7, "garuda": 5,
@@ -373,9 +449,12 @@ PROVISIONS = {
     "parashu": 7, "akshaya": 6, "kavach": 9,
     "brahma": 16, "brahmashirsha": 18, "brahmanda": 20, "pashupata": 17,
     "narayana": 15, "vaishnava": 14, "vasavi": 13, "raudra": 15,
+    "sarvatobhadra": 8, "ardhachandra": 8, "chakra": 10, "kurma": 7,
+    "vajra_vyuha": 8, "shyena": 8, "garuda_vyuha": 7, "makara": 8, "shakata": 7,
+    "vyala": 7, "krauncha": 7, "mandala": 7, "deva": 9,
 }
 
-ALL_CARDS = {**SPECIALS, **ASTRAS, **SHASHTRAS, **DIVINE}
+ALL_CARDS = {**SPECIALS, **ASTRAS, **SHASHTRAS, **DIVINE, **VYUHAS}
 
 ASTRA_POOL = ("agni", "varuna", "vayu", "parvata", "naga", "garuda", "mohini",
               "vajra", "sabda", "tvashtar", "surya", "maya")
@@ -437,8 +516,8 @@ def provision(d: CardDef) -> int:
 
 
 def deck_specials(pair: tuple[str, ...]) -> tuple[str, ...]:
-    """Seven specials: weather for the thin row, clear, horn, scorch, one
-    shaastra, and two from the astra/divine pool."""
+    """Eight specials: weather for the thin row, clear, horn, scorch, the
+    kingdom's vyuha, one shaastra, and two from the astra/divine pool."""
     rows = {r: 0 for r in ROWS}
     for f in pair:
         for d in faction_pool(f):
@@ -448,6 +527,7 @@ def deck_specials(pair: tuple[str, ...]) -> tuple[str, ...]:
     weather = {"padati": "frost", "ashva": "fog", "gaja": "rain"}[thin]
     idx = sum(KINGDOM_ORDER.get(f, 0) for f in pair)
     shastra = SHASHTRA_POOL[idx % len(SHASHTRA_POOL)]
+    vyuha = KINGDOM_VYUHA[pair[0]]
     major = any(KINGDOM_TIER[f] == "major" for f in pair)
     if major:
         first = DIVINE_POOL[idx % len(DIVINE_POOL)]
@@ -455,7 +535,7 @@ def deck_specials(pair: tuple[str, ...]) -> tuple[str, ...]:
     else:
         first = ASTRA_POOL[idx % len(ASTRA_POOL)]
         second = ASTRA_POOL[(idx + 5) % len(ASTRA_POOL)]
-    return (weather, "clear", "horn", "scorch", shastra, first, second)
+    return (weather, "clear", "horn", "scorch", vyuha, shastra, first, second)
 
 
 def _max_affordable(available: list[CardDef], budget: int) -> int:
@@ -470,7 +550,7 @@ def _max_affordable(available: list[CardDef], budget: int) -> int:
 
 
 def build_alliance_deck(pair: tuple[str, ...], budget: int = 200,
-                        units: int = 18) -> list[CardDef]:
+                        units: int = 17) -> list[CardDef]:
     """Pick units from the allied kingdoms under a provision budget.
 
     At most two kingdoms, each contributing an equal share. Elite kingdoms may
@@ -533,6 +613,6 @@ def build_alliance_deck(pair: tuple[str, ...], budget: int = 200,
     return deck
 
 
-def build_deck(faction: str, units: int = 18) -> list[CardDef]:
+def build_deck(faction: str, units: int = 17) -> list[CardDef]:
     """Single kingdom deck."""
     return build_alliance_deck((faction,), units=units)
